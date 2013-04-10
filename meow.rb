@@ -6,7 +6,7 @@ require 'sinatra'
 
 get '/' do
 	"Welcome to meowlol\n"
-	"<a href=\"javascript:window.external.AddSearchProvider\(\'http:\/\/meowlol.heroku.com\/meow\_opensearch\'\);\">click here to install<\/a>"
+	"<a href=\"javascript:window.external.AddSearchProvider\(\'http:\/\/meowlol.heroku.com\/install'\);\">click here to install<\/a>"
 
 end
 
@@ -22,9 +22,8 @@ get '/meow/:url' do
 end
 
 get '/install' do
-  	"<a href=\"javascript:window.external.AddSearchProvider\(\'https:\/\/bunnylol.facebook.net\/?\_opensearch\'\);\">click here to install<\/a>"
+	redirect('/search_install.xml')
 end
-
 
 
 get '/files/:path' do 
