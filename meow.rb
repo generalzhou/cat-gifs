@@ -5,7 +5,9 @@
 require 'sinatra'
 
 get '/' do
-	"Hello and welcome to your test program for Sinatra"
+	"Welcome to meowlol\n"
+	"<a href=\"javascript:window.external.AddSearchProvider\(\'http:\/\/meowlol.heroku.com\/meow\_opensearch\'\);\">click here to install<\/a>"
+
 end
 
 
