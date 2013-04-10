@@ -5,9 +5,10 @@
 require 'sinatra'
 
 get '/' do
-	"Welcome to meowlol\n"
+	"Welcome to meowlol, search shortcut tool"
+	"This is based on bunny1 by Charlie Cheever when he was at Facebook"
+	'<a href = "https://github.com/generalzhou/meowlol">Fork me on Github!</a>'
 	"<a href=\"javascript:window.external.AddSearchProvider\(\'http:\/\/meowlol.heroku.com\/install'\);\">click here to install<\/a>"
-
 end
 
 
