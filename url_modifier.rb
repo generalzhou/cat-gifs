@@ -15,9 +15,13 @@ class UrlModifier
 
 	def shortcut(input_url)
 		split_args = decoder(input_url).chomp.split(' ')
-		url = base_url(split_args[0])
-		modifier = split_args[1].nil? ?  '' : add_modifier(split_args[1])
-		url + modifier
+		if SHORTCUTS[split_args[0]]
+			url = base_url(split_args[0])
+			modifier = split_args[1].nil? ?  '' : add_modifier(split_args[1])
+			url + modifier
+		else 
+			google_it(input_url)
+		end
 	end
 
 	def decoder(input_url)
@@ -32,13 +36,13 @@ class UrlModifier
 		if MODIFIER[arg]
 			MODIFIER[arg]
 		else
-			' ' + arg
+			''
 		end
 	end
 
 
 	def google_it(url)
-		"http://google.com/search?q=#{url}"
+		URI.escape("https://www.google.com/search?q=#{url}")
 	end
 
 end
