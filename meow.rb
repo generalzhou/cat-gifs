@@ -1,9 +1,8 @@
 #author: jack zhou
 #Ruby version of bunny1 by ccheever #https://github.com/ccheever/bunny1
 
-# require "execjs"
 require 'sinatra'
-require './url_modifier'
+require_relative 'url_modifier'
 
 urlizer = UrlModifier.new
 
